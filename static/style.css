@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    color: #06041a; /* dark mode colour: #e8e6fb */
+    background-color: #eae9fb; /*dark mode colour: #23242a*/
+
+    margin:0;
+    padding:0;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4rem;}
+
+h2 {font-size: 3rem;}
+
+h3 {font-size: 2rem;}
+
+h4 {font-size: 1.5rem;}
+
+h5 {font-size: 1rem;}
+
+#home-first-sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#home-first-sec h2{
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.content {
+    margin-left: 0;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    transition: margin-left 0.3s ease;
+}
+
+.content.active {
+    margin-left: 30ch;
+}
+
+.sidebar-icon {
+    position: relative;
+    width: 100%;
+}
+
+.sidebar-icon img {
+    margin: 3ch;
+    border-radius: 50%;
+    width: 100%; /* Make the image take up 100% of the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 50px; /* Set a max width to control size */
+    object-fit: cover; /* Ensure the image covers the container while maintaining proportions */
+    transition: 0.2s ease;
+}
+
+.sidebar-icon img:hover{
+    background-color: rgba(178, 139, 232, 0.4);
+}
+
+.sidebar-menu {
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+    background-color:#b28be8; /*#636476 for dark mode*/
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    border: #a77be4 2px solid; /*#444451 for dark mode*/
+    box-shadow: 0 0 10px #a77be4;
+    transition: transform 0.3s ease;
+    transform: translateX(-100vh); /* Move off-screen */
+}
+
+.sidebar-icon.active .sidebar-menu{
+    transform: translateX(0);
+}
+
+.sidebar-icon .sidebar-menu #sidebar-content{
+    position: fixed;
+    bottom: 0;
+    margin: 2ch;
+    padding: 2ch;
+}
+
+#toggle-mode {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically centers the items */
+    justify-content: center; /* Horizontally centers the items */   
+    padding: 10px;
+    background-color: #b28be8;
+    border: none;
+    cursor: pointer;
+    width: 16vw;
+    height: 8vh;
+    padding-right: 10ch;
+}
+
+#toggle-mode:hover{
+    background-color: #c59bff;
+    border: 1px solid #d0afff;
+    border-radius: 20px;
+}
+
+#toggle-mode img {
+    width: 20px; /* Resize the image */
+    height: 20px; /* Maintain square aspect ratio */
+    
+}
