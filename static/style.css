@@ -37,9 +37,13 @@ h5 {font-size: 1rem;}
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     margin-left: 0;
     margin-top: 3rem;
     padding-top: 1rem;
+    align-items: center;
+    justify-content: center;
     transition: margin-left 0.3s ease;
 }
 
@@ -188,4 +192,37 @@ h5 {font-size: 1rem;}
 
 #top-drop {
     border-bottom: #a6accb 2px solid;
+}
+
+.content #task-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2ch;
+    margin-top: 2ch;
+    border: black 2px solid;
+    border-radius: 20px;
+}
+
+#task-input #row{
+    display: flex;
+    flex-direction: row;
+}
+
+#row p{
+    padding-right: 2ch;
+}
+
+#submit {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.activity-List, .activity-List th, .activity-List td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 1ch;
 }
