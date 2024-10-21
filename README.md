@@ -1,7 +1,7 @@
 # Task-Scheduler
 Simple website to list and schedule tasks
 
-# Tool used
+# Tools used
 1. HTML
 2. CSS
 3. JavaScript
